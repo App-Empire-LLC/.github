@@ -1,0 +1,66 @@
+name: Epic
+description: Track a large body of work spanning multiple issues
+title: "[Epic]: "
+body:
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Outcome
+      description: What meaningful product or business outcome does this epic deliver?
+      placeholder: Describe the shared outcome this epic is driving.
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: Why
+      description: Why are we doing this now?
+      placeholder: Strategic reason, urgency, expected value, risk reduction, etc.
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: What major workstreams or themes are included?
+      placeholder: |
+        - ...
+        - ...
+        - ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: child_work
+    attributes:
+      label: Child issues / work items
+      description: Add related issues if they already exist.
+      placeholder: |
+        - #123
+        - org/repo#456
+        - org/repo#789
+
+  - type: textarea
+    id: out_of_scope
+    attributes:
+      label: Out of scope
+      description: What is explicitly not part of this epic?
+
+  - type: textarea
+    id: done_when
+    attributes:
+      label: Done when
+      description: How will we know this epic is complete?
+      placeholder: |
+        - ...
+        - ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Dependencies, risks, links, related docs, etc.

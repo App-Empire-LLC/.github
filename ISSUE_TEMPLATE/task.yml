@@ -1,0 +1,51 @@
+name: Task
+description: Track a discrete unit of work
+title: "[Task]: "
+body:
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objective
+      description: What needs to get done?
+      placeholder: Describe the task clearly and directly.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Engineering
+        - BizOps
+        - Design
+        - Legal/Admin
+        - Vendor
+        - Docs
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: Why
+      description: Why is this task worth doing?
+      placeholder: Context, reason, dependency, cleanup, compliance, etc.
+
+  - type: textarea
+    id: done_when
+    attributes:
+      label: Done when
+      description: Definition of done
+      placeholder: |
+        - ...
+        - ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Links, dependencies, blockers, related issues, etc.

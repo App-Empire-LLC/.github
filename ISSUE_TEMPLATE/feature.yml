@@ -1,0 +1,54 @@
+name: Feature
+description: Propose a new capability or meaningful enhancement
+title: "[Feature]: "
+body:
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Outcome
+      description: What are we trying to enable?
+      placeholder: Describe the user-visible or business outcome.
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem / opportunity
+      description: Why does this matter?
+      placeholder: What pain, limitation, or opportunity does this address?
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: What is in scope for this feature?
+      placeholder: Core behavior, screens, endpoints, flows, constraints, etc.
+    validations:
+      required: true
+
+  - type: textarea
+    id: out_of_scope
+    attributes:
+      label: Out of scope
+      description: What is explicitly not part of this feature?
+      placeholder: Keep this tight to avoid scope drift.
+
+  - type: textarea
+    id: done_when
+    attributes:
+      label: Done when
+      description: Acceptance criteria
+      placeholder: |
+        - ...
+        - ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Links, mocks, docs, related issues, dependencies, etc.
