@@ -1,12 +1,17 @@
 name: Feature
-description: Propose a new capability or meaningful enhancement
+description: Propose a new capability, improvement, or engineering change
 title: "[Feature]: "
 body:
+  - type: markdown
+    attributes:
+      value: |
+        Standard issue authoring rules: [appire_docs/docs/engineering/standards/product_requests.md](https://github.com/App-Empire-LLC/appire_docs/blob/main/docs/engineering/standards/product_requests.md). Run `/devkit.review-issue <ref>` against this issue before SpecKit handoff.
+
   - type: textarea
     id: outcome
     attributes:
       label: Outcome
-      description: What are we trying to enable?
+      description: What are we trying to enable? Speak from the requester's perspective.
       placeholder: Describe the user-visible or business outcome.
     validations:
       required: true
@@ -15,7 +20,7 @@ body:
     id: problem
     attributes:
       label: Problem / opportunity
-      description: Why does this matter?
+      description: Why does this matter? Current pain, limitation, risk, or opportunity.
       placeholder: What pain, limitation, or opportunity does this address?
     validations:
       required: true
@@ -24,7 +29,7 @@ body:
     id: scope
     attributes:
       label: Scope
-      description: What is in scope for this feature?
+      description: What is in scope for this feature? Outcomes and boundaries; not implementation steps.
       placeholder: Core behavior, screens, endpoints, flows, constraints, etc.
     validations:
       required: true
@@ -33,17 +38,25 @@ body:
     id: out_of_scope
     attributes:
       label: Out of scope
-      description: What is explicitly not part of this feature?
+      description: What is explicitly not part of this feature? Be specific — vague items like "future work" don't bind anything.
       placeholder: Keep this tight to avoid scope drift.
 
   - type: textarea
     id: done_when
     attributes:
-      label: Done when
-      description: Acceptance criteria
+      label: Done when (Acceptance Criteria)
+      description: |
+        What's true when the requester says "yes, this is what I asked for." Each item should be observable and judgeable true/false.
+
+        Avoid these anti-patterns (see product_requests.md):
+        • Implementation choices ("Use Express")               → Requirement Leakage
+        • Test mechanics ("Add unit tests for X")              → Test Plan as AC
+        • "The thing we discussed yesterday"                   → Chat-History Dependency
+        • Negative or absolute wording ("does not", "regardless of", "never") without naming the test you'd write → Verification-Scope Ambiguity
       placeholder: |
-        - ...
-        - ...
+        - The operator can ...
+        - The system records ...
+        - When X happens, Y is true.
     validations:
       required: true
 
@@ -51,4 +64,4 @@ body:
     id: notes
     attributes:
       label: Notes
-      description: Links, mocks, docs, related issues, dependencies, etc.
+      description: Links, mocks, docs, related issues, dependencies, advisory implementation notes (NOT acceptance criteria).

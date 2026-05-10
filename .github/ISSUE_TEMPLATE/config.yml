@@ -1,1 +1,5 @@
-blank_issues_enabled: false
+blank_issues_enabled: true
+contact_links:
+  - name: Issue authoring guidelines
+    url: https://github.com/App-Empire-LLC/appire_docs/blob/main/docs/engineering/standards/product_requests.md
+    about: Read the App Empire issue authoring standard before opening a non-trivial issue. Run /devkit.review-issue against your draft before SpecKit handoff.

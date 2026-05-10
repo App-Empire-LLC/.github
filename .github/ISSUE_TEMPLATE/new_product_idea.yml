@@ -1,0 +1,48 @@
+name: New Product Idea
+description: Capture a vertical idea from the idea factory (pre-issue brainstorming stage)
+title: "[Idea]: "
+labels: [idea]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Lightweight template for capturing product ideas before they're shaped into features. Once an idea graduates to actionable work, open an **Epic** or **Feature** instead — see [appire_docs/docs/engineering/standards/product_requests.md](https://github.com/App-Empire-LLC/appire_docs/blob/main/docs/engineering/standards/product_requests.md).
+
+  - type: input
+    id: idea_name
+    attributes:
+      label: Idea name
+      description: What is the proposed product or service?
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What problem does it solve, and for whom?
+    validations:
+      required: true
+
+  - type: textarea
+    id: core_ip
+    attributes:
+      label: Core IP required
+      description: Which pieces of the existing IP (Cortex, DSE, etc.) does this leverage?
+
+  - type: dropdown
+    id: confidence
+    attributes:
+      label: Confidence
+      description: How complete are the technical components?
+      options:
+        - "Low (0–25%)"
+        - "Medium-low (25–50%)"
+        - "Medium-high (50–75%)"
+        - "High (75–100%)"
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Additional context, links, related ideas.

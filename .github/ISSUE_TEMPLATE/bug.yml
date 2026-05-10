@@ -2,6 +2,11 @@ name: Bug
 description: Report a defect or regression
 title: "[Bug]: "
 body:
+  - type: markdown
+    attributes:
+      value: |
+        Standard issue authoring rules: [appire_docs/docs/engineering/standards/product_requests.md](https://github.com/App-Empire-LLC/appire_docs/blob/main/docs/engineering/standards/product_requests.md). Avoid prescribing the fix unless the root cause is already known and the fix itself is the requested work.
+
   - type: textarea
     id: summary
     attributes:
@@ -45,6 +50,23 @@ body:
         1. Go to ...
         2. Click ...
         3. Observe ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance criteria
+      description: |
+        What's true when the bug is fixed? Standard pattern:
+        • The expected behavior occurs.
+        • The failure no longer occurs under the reported condition.
+        • Related existing behavior is preserved.
+
+        State the corrected behavior — don't preempt the fix with implementation steps (Requirement Leakage).
+      placeholder: |
+        - ...
+        - ...
     validations:
       required: true
 

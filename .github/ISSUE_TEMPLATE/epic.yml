@@ -1,7 +1,12 @@
 name: Epic
-description: Track a large body of work spanning multiple issues
+description: Parent issue spanning multiple child stories or sub-epics
 title: "[Epic]: "
 body:
+  - type: markdown
+    attributes:
+      value: |
+        Standard issue authoring rules: [appire_docs/docs/engineering/standards/product_requests.md](https://github.com/App-Empire-LLC/appire_docs/blob/main/docs/engineering/standards/product_requests.md). The epic should describe the larger outcome and boundaries — don't duplicate every child's acceptance criteria here. Link to the children instead.
+
   - type: textarea
     id: outcome
     attributes:
@@ -15,7 +20,7 @@ body:
     id: why
     attributes:
       label: Why
-      description: Why are we doing this now?
+      description: Why are we doing this now? Strategic reason, urgency, expected value, risk reduction.
       placeholder: Strategic reason, urgency, expected value, risk reduction, etc.
     validations:
       required: true
@@ -24,7 +29,7 @@ body:
     id: scope
     attributes:
       label: Scope
-      description: What major workstreams or themes are included?
+      description: What major workstreams or themes are included? Stay at the epic level — per-feature detail belongs in the children.
       placeholder: |
         - ...
         - ...
@@ -46,15 +51,24 @@ body:
     id: out_of_scope
     attributes:
       label: Out of scope
-      description: What is explicitly not part of this epic?
+      description: |
+        What is explicitly not part of this epic? Be specific.
+
+        Note: negative wording (does not, must not, regardless of) is fine in this section — it's about exclusion. But if it shows up in "Done when" below, see the Verification-Scope Ambiguity anti-pattern in the standard.
 
   - type: textarea
     id: done_when
     attributes:
-      label: Done when
-      description: How will we know this epic is complete?
+      label: Done when (Definition of Done)
+      description: |
+        Implementer-side completion criteria for the epic as a whole — "I can stop working on this epic now." Distinct from per-child acceptance criteria; see the AC vs DoD section of product_requests.md.
+
+        Common epic-level DoD items beyond "all children closed":
+        • Integration tested across the epic surface
+        • Cross-cutting docs / ADRs updated
+        • Operational requirements satisfied (deployed, monitored, runbook)
       placeholder: |
-        - ...
+        - All linked child issues closed.
         - ...
     validations:
       required: true

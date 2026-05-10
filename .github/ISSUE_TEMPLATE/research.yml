@@ -1,0 +1,65 @@
+name: Research / Investigation
+description: Investigate something to make a decision — produces a recommendation, not an implementation
+title: "[Research]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Standard issue authoring rules: [appire_docs/docs/engineering/standards/product_requests.md](https://github.com/App-Empire-LLC/appire_docs/blob/main/docs/engineering/standards/product_requests.md).
+
+        Research issues should produce a decision, recommendation, or follow-up issue set — NOT a pre-baked implementation outcome. If you already know what's going to be built, this should be a **Feature**, not Research.
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Research question
+      description: What needs to be learned?
+      placeholder: One or two sentences naming the question.
+    validations:
+      required: true
+
+  - type: textarea
+    id: decision_needed
+    attributes:
+      label: Decision needed
+      description: What decision should this research enable?
+      placeholder: e.g. "Pick a transport for cross-service async events" or "Decide whether to extract X into its own service."
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: What sources, systems, or options should be examined?
+      placeholder: |
+        - Option A: ...
+        - Option B: ...
+        - Constraints / non-options: ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: out_of_scope
+    attributes:
+      label: Out of scope
+      description: What this research will NOT decide. Useful when an investigation can reasonably expand into adjacent questions.
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance criteria
+      description: What's true when the research is complete? The default pattern below covers most cases — adjust as needed.
+      value: |
+        - The investigation identifies viable options.
+        - Each option includes tradeoffs.
+        - The recommendation names a preferred option.
+        - Follow-up implementation issues are created if implementation is warranted.
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Prior art, prior chat summaries, related issues, references.

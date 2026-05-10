@@ -1,12 +1,19 @@
 name: Task
-description: Track a discrete unit of work
+description: Track a small, well-defined unit of work — not a feature, not a bug, not research
 title: "[Task]: "
 body:
+  - type: markdown
+    attributes:
+      value: |
+        Standard issue authoring rules: [appire_docs/docs/engineering/standards/product_requests.md](https://github.com/App-Empire-LLC/appire_docs/blob/main/docs/engineering/standards/product_requests.md).
+
+        Use this for small, mechanical work that doesn't need the full Feature shape (e.g. rename a thing, bump a dep, add a doc page, port a script). If the work involves design decisions, user-visible behavior, or more than a few hours, use the **Feature** template instead.
+
   - type: textarea
     id: objective
     attributes:
       label: Objective
-      description: What needs to get done?
+      description: What needs to get done? One or two sentences.
       placeholder: Describe the task clearly and directly.
     validations:
       required: true
