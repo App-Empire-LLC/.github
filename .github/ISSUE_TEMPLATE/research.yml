@@ -5,7 +5,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Standard issue authoring rules: [appire_docs/docs/engineering/standards/product_requests.md](https://github.com/App-Empire-LLC/appire_docs/blob/main/docs/engineering/standards/product_requests.md).
+        Standard issue authoring rules: [appire_docs/docs/engineering/standards/issue_authoring.md](https://github.com/App-Empire-LLC/appire_docs/blob/main/docs/engineering/standards/issue_authoring.md).
 
         Research issues should produce a decision, recommendation, or follow-up issue set — NOT a pre-baked implementation outcome. If you already know what's going to be built, this should be a **Feature**, not Research.
 

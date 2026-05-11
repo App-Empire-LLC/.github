@@ -5,7 +5,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Standard issue authoring rules: [appire_docs/docs/engineering/standards/product_requests.md](https://github.com/App-Empire-LLC/appire_docs/blob/main/docs/engineering/standards/product_requests.md).
+        Standard issue authoring rules: [appire_docs/docs/engineering/standards/issue_authoring.md](https://github.com/App-Empire-LLC/appire_docs/blob/main/docs/engineering/standards/issue_authoring.md).
 
         Use this for small, mechanical work that doesn't need the full Feature shape (e.g. rename a thing, bump a dep, add a doc page, port a script). If the work involves design decisions, user-visible behavior, or more than a few hours, use the **Feature** template instead.
 

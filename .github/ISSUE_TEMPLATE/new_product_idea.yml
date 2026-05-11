@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Lightweight template for capturing product ideas before they're shaped into features. Once an idea graduates to actionable work, open an **Epic** or **Feature** instead — see [appire_docs/docs/engineering/standards/product_requests.md](https://github.com/App-Empire-LLC/appire_docs/blob/main/docs/engineering/standards/product_requests.md).
+        Lightweight template for capturing product ideas before they're shaped into features. Once an idea graduates to actionable work, open an **Epic** or **Feature** instead — see [appire_docs/docs/engineering/standards/issue_authoring.md](https://github.com/App-Empire-LLC/appire_docs/blob/main/docs/engineering/standards/issue_authoring.md).
 
   - type: input
     id: idea_name

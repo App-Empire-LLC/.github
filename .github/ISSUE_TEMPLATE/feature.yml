@@ -5,7 +5,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Standard issue authoring rules: [appire_docs/docs/engineering/standards/product_requests.md](https://github.com/App-Empire-LLC/appire_docs/blob/main/docs/engineering/standards/product_requests.md). Run `/devkit.review-issue <ref>` against this issue before SpecKit handoff.
+        Standard issue authoring rules: [appire_docs/docs/engineering/standards/issue_authoring.md](https://github.com/App-Empire-LLC/appire_docs/blob/main/docs/engineering/standards/issue_authoring.md). Run `/devkit.review-issue <ref>` against this issue before SpecKit handoff.
 
   - type: textarea
     id: outcome
@@ -48,7 +48,7 @@ body:
       description: |
         What's true when the requester says "yes, this is what I asked for." Each item should be observable and judgeable true/false.
 
-        Avoid these anti-patterns (see product_requests.md):
+        Avoid these anti-patterns (see issue_authoring.md):
         • Implementation choices ("Use Express")               → Requirement Leakage
         • Test mechanics ("Add unit tests for X")              → Test Plan as AC
         • "The thing we discussed yesterday"                   → Chat-History Dependency
